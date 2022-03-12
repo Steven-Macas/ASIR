@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Vaccines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vaccine" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="vaccine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nameVaccine" type="xs:token"/>
+        <xs:element ref="discovererCountry"/>
+        <xs:element ref="Disease"/>
+        <xs:element ref="via"/>
+        <xs:element ref="dose"/>
+        <xs:element name="manufacturingCompany" type="T_infoCompany"/>
+        <xs:element ref="supplyCompany"/>
+        <xs:element ref="vaccinatedPeople"/>
+      </xs:sequence>
+      <xs:attribute ref="discoveryYear" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="discovererCountry">
+    <xs:complexType>
+      <xs:attribute name="from" type="xs:token" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="Disease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nameDisease"/>
+        <xs:element ref="symptoms"/>
+        <xs:element ref="mortalityRate" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="nameDisease">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:token">
+          <xs:attribute ref="contagious"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:attribute name="contagious">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:pattern value="Yes|No"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+  <xs:element name="symptoms">
+    <xs:simpleType>
+      <xs:restriction base="T_listDisease">
+        <xs:length value="2"/>
+      </xs:restriction>
+    </xs:simpleType>  
+  </xs:element>
+  
+  <xs:simpleType name="T_listDisease">
+     <xs:list itemType="xs:token"/>
+  </xs:simpleType>  
+  
+  <xs:element name="mortalityRate">
+    <xs:simpleType>
+      <xs:union memberTypes="T_percentage T_numDeaths"/>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:simpleType name="T_percentage">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[1-9]%"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="T_numDeaths">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[1-9]Deaths"/>
+    </xs:restriction>
+  </xs:simpleType>  
+  
+  <xs:element name="via" default="Oral">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:pattern value="IM|ID|SC|Oral"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:element name="dose">
+    <xs:complexType>
+      <xs:all>
+         <xs:element name="patientAge" type="xs:token"/>
+        <xs:element name="numberTotal" type="xs:token"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="T_infoCompany">
+      <xs:sequence>
+        <xs:element name="name" type="xs:token"/>
+        <xs:element ref="FoundationYear"/>
+        <xs:element ref="email"/>
+      </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="FoundationYear">
+    <xs:simpleType>
+      <xs:restriction base="xs:positiveInteger">
+         <xs:minInclusive value="578"/>
+         <xs:maxInclusive value="4000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:element name="email">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:pattern value="[A-Za-z0-9\-_]+(\.[A-Za-z0-9\-_]+)*@[A-Za-z0-9\-_]+(\.[A-Za-z0-9\-_]+)+"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:element name="supplyCompany">
+    <xs:complexType >
+      <xs:complexContent>
+      <xs:extension base="T_infoCompany">
+      <xs:sequence>
+        <xs:element ref="address"/>
+        <xs:element ref="phone"/>
+      </xs:sequence>
+      </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="address">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="typeVia"/>
+         <xs:element name="nameVia" type="xs:token"/>
+         <xs:element ref="CP"/>
+         <xs:choice>
+          <xs:element name="location" type="xs:token"/>
+          <xs:element name="municipality" type="xs:token"/>
+         </xs:choice>
+         <xs:element name="Province" type="xs:token"/>
+       </xs:sequence>
+     </xs:complexType>
+  </xs:element>
+
+  <xs:element name="typeVia" default="street">
+    <xs:simpleType>
+         <xs:restriction base="xs:token">
+           <xs:enumeration value="street"/>
+           <xs:enumeration value="avenue"/>
+           <xs:enumeration value="plaza"/>
+         </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+<xs:element name="CP">
+   <xs:simpleType>
+     <xs:restriction base="xs:positiveInteger">
+       <xs:minInclusive value="1001"/>
+       <xs:maxInclusive value="52080"/>
+     </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+  
+  <xs:element name="phone">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:pattern value="\d{3}\.\d{3}\.\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:element name="vaccinatedPeople">
+    <xs:complexType/>
+  </xs:element>
+  
+  <xs:attribute name="discoveryYear">
+   <xs:simpleType>
+     <xs:restriction base="xs:positiveInteger">
+       <xs:minInclusive value="1796"/>
+       <xs:maxInclusive value="3000"/>
+     </xs:restriction>
+   </xs:simpleType>
+  </xs:attribute>
+</xs:schema>

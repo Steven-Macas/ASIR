@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Vaccines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VaccinesStevenMacas.xsd">
+  <vaccine discoveryYear="1995">
+  
+    <nameVaccine>Varivax</nameVaccine>
+    
+    <discovererCountry from="Japan"/>
+    
+    <Disease>
+      <nameDisease contagious="Yes">Chickenpox</nameDisease>
+      <symptoms >Fever, headache</symptoms>
+      <mortalityRate>1%</mortalityRate>
+    </Disease>
+    
+    <via>ID</via>
+    
+    <dose>
+      <patientAge>9 months</patientAge>
+      <numberTotal>2 dose</numberTotal>
+    </dose>
+    
+    <manufacturingCompany>
+      <name>Sanofi</name>
+      <FoundationYear>2004</FoundationYear>
+      <email>esprotecciondedatos@sanofi.com</email>
+    </manufacturingCompany>
+    
+    <supplyCompany>
+    <name>Pfizer</name>
+      <FoundationYear>1849</FoundationYear>
+      <email>DireccionTecnicaSpain@Pfizer.com</email>
+      <address>
+        <typeVia>plaza</typeVia>
+       <nameVia>Sor Teresa Prat</nameVia>
+       <CP>29003</CP>
+       <location>Marbella</location>
+       <Province>Málaga</Province>
+      </address>
+      <phone>914.909.900</phone>
+    </supplyCompany>
+    
+    <vaccinatedPeople/>
+    
+  </vaccine>
+  
+</Vaccines>
