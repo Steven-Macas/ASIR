@@ -1,1 +1,1 @@
-Aquí podrás ver algunos de las prácticas que se han realizado durante el curso de ASIR
+En este proyecto se creará un feed sobre la flexibilización actual de las restricciones de la COVID-19 en Europa y un documento XSLT para transformarlo en uno HTML que se vinculará a un documento CSS para que se muestre en un navegador en tiempo real.
