@@ -1,0 +1,539 @@
+  /*CSS that affects all pages*/
+* { 
+  padding: 0;
+  margin: 0;
+  font-style: oblique;
+}
+
+body{
+  color: #4b5250;
+  background: -webkit-linear-gradient(to top, #0fe79f, #88fc88);
+	background: linear-gradient(to top, #0fe79f, #88fc88);
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+  background: rgb(3, 75, 33);
+}
+body::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255, .3);
+  border-radius: 10px;
+}
+
+header{
+  margin: 10px;
+  width: 150%;
+  height: 45px;
+  box-shadow: 1px 1px 5px #60a890;
+  background-color: #00CC99;
+  position: fixed;
+  border-radius: 50px;
+}
+
+#zoom{
+  cursor: zoom-in;
+}
+
+.shield{
+  padding-left: 2%;
+  width: 40px;
+  height: 40px;
+}
+a.index{
+  margin-left: 2px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 40px;
+}
+a.index:hover{
+  color: #099465;
+}
+#menu{
+  width: 35%;
+  padding: 5px 15px;
+  background: #099465;
+  margin: auto;
+  border-radius: 50px;
+}
+#menu ul a{
+  padding: 10px 10px 10px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-style: italic;
+}
+
+#menu ul a:hover{
+  color: aqua;
+  background: rgba(255,255,255,0.05);
+}
+
+aside {
+  color: #ffffff;
+  width: 20%;
+  padding: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 100px;
+  margin-left: 82%;
+  font-style: italic;
+  background: #08c083;
+  position: fixed;
+  border-radius: 10px;
+}
+
+ul.viñeta{
+  list-style-image: url('../MacasOrdóñez,Steven/Imagenes/viñeta.png');
+}
+
+aside ul li{
+  padding-left: 5px;
+}
+
+aside ul li a{
+  color: #ffffff;
+}
+
+aside ul li a:hover{
+  color: aqua;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+}
+
+aside ul li a{
+  text-decoration: none;
+}
+  /*End CSS that affects all pages*/
+
+  /*CSS in Index*/
+section{
+  padding: 70px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: justify;
+  margin-left: 70px;
+}
+
+section img.edit{
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  border-radius: 20px;
+
+}
+img.map{
+  border-radius: 30%;
+}
+
+p{
+  margin-right: 40%;
+}
+.h{
+  padding-top: 15px;
+}
+#justify{
+  text-align: justify;
+  padding: 20px;
+  padding-top: 20px;
+}
+  /*End CSS in Index*/
+
+  /*CSS that affects all pages*/ 
+img.flecharight{
+  margin-left: 73%;
+  margin-top: 13%;
+  position:absolute;
+}
+
+img.flechaleft{
+  position: absolute;
+  margin-top: 13%;
+  margin-left: 6%;
+}
+
+  
+footer{
+  background:rgba(255,255,255, .3);
+  padding: 0px;
+  padding-left: 2%;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin: 15%;
+  margin-right: 30%;
+  margin-bottom: 0;
+  border-radius: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-style: inset;
+  border-bottom-style:groove;
+  border-color: #099465;
+  color: #4b5250;
+  font-family:sans-serif ;
+}
+#foot{
+  padding: 10px;
+}
+  /*End CSS that affects all pages*/ 
+
+  /*CSS in News*/ 
+h1.news{
+  padding: 100px;
+  padding-top: 80px;
+  padding-bottom: 0px;
+  text-align: justify;
+  margin-left: 70px;
+}
+
+article{
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  text-align: justify;
+  margin-left: 100px;
+}
+
+img.rad{
+  padding: 5px;
+  padding-left: 50px;
+  border-radius: 20px;
+}
+
+article p.arti{
+  padding-left: 5px;
+  border: none;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-radius: 20px 0px 0px 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.05);
+}
+
+#viñeta2{
+  list-style-image: url('../MacasOrdóñez,Steven/Imagenes/lastNews.png');
+  padding: 10px;
+  padding-top: 0px;
+}
+
+#subt{
+  padding-left: 30px;
+  padding-bottom: 10px;
+  font-family: monospace;
+  font-size: 15px;
+}
+article ul ul li.typlist{
+  margin-left: 60px;
+  list-style-type:armenian;
+}
+
+.subt2{
+  margin-left: 10px;
+  padding-top: 20px;
+}
+  /*End CSS in News*/
+
+  /*CSS in Protocol*/
+section.protoco{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 11%;
+  padding-bottom: 0px;
+}
+#protoc{
+  margin-top: 3%;
+  padding-bottom: 20px;
+}
+
+img.protoc3{
+  padding: 30px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 0px;
+}
+
+.protoc2{
+  padding-left: 20px;
+}
+
+section ul li.listprotoc{
+  list-style-image: url('../MacasOrdóñez,Steven/Imagenes/school.png');
+  margin-right: 20%;
+}
+
+.lisprotoc2{
+  list-style-image: none;
+  list-style-type:upper-roman;
+}
+
+#lisprotoc3{
+  margin-right: 29%;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+  /*End CSS in Protocol*/
+
+  /*CSS in Castilla y León*/ 
+#tablh1{
+  margin-top: 40px;
+  margin-left: 12%;
+}
+#tablp{
+  margin-left: 12%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+}
+table, th, td{
+  border: 1px solid #0ac788;
+}
+
+table{
+  empty-cells: hide;
+  margin-right: 20%;
+  padding: 10px;
+  text-align: center;
+  color: #ec4779;
+  background-color: #484d4b;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-spacing: 15px;
+}
+
+table caption.cap2{
+  caption-side: bottom;
+  border: 10px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  font-size: 25px;
+  font-family: serif;
+}
+
+#encab{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0fe79f;
+}
+
+td.cast{
+  font-family: cursive;
+  color: #0fe79f;
+}
+
+td.tot{
+  font-family:Arial, Helvetica, sans-serif;
+  color: #239cff;
+}
+
+p.endtab{
+  margin-left: 12%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+#imatab2{
+  padding: 10px;
+  margin-left: 18px;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  border: 1pxs solid #484d4b;
+}
+  /*End CSS in Castilla y León*/
+
+  /*CSS in Health*/ 
+section{
+  font-family:'Times New Roman', Times, serif;
+}
+
+.healt{
+  padding-top: 30px;
+  margin-left: 70px;
+}
+p.heal{
+  padding: 20px;
+  padding-left: 80px;
+}
+
+#enl1{
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  margin: 90px;
+  margin-top: 22%;
+  margin-left: 300px;
+  font-size: 30px;
+}
+
+#enl1:hover{
+  color: rgb(8, 194, 194);
+  background: rgba(70, 219, 194, 0.082);
+}
+
+#enl2{
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  margin: 90px;
+  margin-top: 22%;
+  margin-left: 320px;
+  font-size: 30px;
+}
+
+#enl2:hover{
+  color: rgb(8, 194, 194);
+  background: rgba(70, 219, 194, 0.082);
+}
+
+img.health{
+  margin-left: 80px;
+  padding-bottom: 20px;
+}
+
+#lisheal{
+  margin-left: 80px;
+  margin-right: 40%;
+  text-align: justify;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+#lisheal2{
+  padding: 3px;
+}
+  /*End CSS in Health*/
+
+  /*CSS GENERAL FORM */
+.forpri{    
+  padding-top: 15px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+div a.lin{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;   
+  }
+
+div a.lin:hover{
+  color: rgb(5, 168, 168);
+}
+
+.formh{
+    margin-left: 90px;
+    text-align: justify;
+    font-family: cursive;
+  }
+
+.formp{
+  padding: 10px;
+    margin-left: 150px;
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+#formimg{
+  padding: 15px;
+  margin-left: 150px;
+  width:400px;
+  height:300px;
+}
+
+fieldset {
+  background-color: #3eca95;
+  margin-top: 5px;
+}
+
+legend {
+  background-color: rgb(43, 141, 158);
+  color: rgb(252, 252, 252);
+  padding: 5px 10px;
+}
+
+input {
+  width: 70%;
+  border: none;
+  border-left-style: solid;
+  border-top-style: solid;
+  padding: 8px 15px;
+  margin: 5px 30px;
+  background-color: lightgray;
+  border-radius: 100px;
+  border-color: rgb(59, 230, 17);
+  color: rgb(0, 102, 153);
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 15px;
+  
+}
+
+input:focus {
+  border: none;
+  color:white;
+  background-color: rgb(139, 138, 138);
+  font-family: "Times New Roman", Times, serif;
+}
+
+label {
+  color: white;
+  padding: 1px 8px;
+  font-family: Arial;
+}
+
+textarea {
+  margin: 10px ;
+  display: block;
+  height: 100px;
+  width: 400px;
+}
+
+div.espa{
+  margin: 10px 0;
+}
+
+input.wi {
+  width: 15px;
+  margin: 5px;
+}
+    /*Form1(Health Travel)*/
+
+
+#mayus{
+  font-weight: 900;
+}
+
+
+
+input.bor {
+  width: 40%;
+  margin:20px 300px;
+  padding: 20px;
+  border-style: dotted dashed solid double;
+  font-size: 15px;
+}
+    /*End Form1(Health Travel)*/
+
+    /*Form2(Voluntary)*/
+#formfil{
+  border: none;
+}
+
+#formimg2{
+  margin-top: 50px;
+  margin-left: 300px;
+  width: 700px;
+  height: 400px;
+}
+
+input.bor2{
+  width: 40%;
+  margin:20px 300px;
+  padding: 20px;
+  border-style: solid;
+  font-size: 20px;
+}
+
+div.foropt{
+  text-align: left;
+  padding: 15px;
+}
