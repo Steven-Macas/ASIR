@@ -1,0 +1,59 @@
+body{
+	background-color: lightgreen;
+	width: 90%;
+	color: white;
+}
+	hr{
+		width: 50%;
+}
+form{
+	margin: auto;
+	background-color: #3CB371;
+	width: 60%;
+	padding: 15px;
+	text-align: center;
+	border-radius: 100px 100px;
+	margin-top: 30px;
+}
+fieldset{
+	margin: auto;
+	width: 20%;
+}
+	h1{
+text-align: center;
+}
+a{
+	border-radius: 100px;
+	padding: 5px;
+	text-decoration: none;
+	color: lightgreen;
+	background-color: #3CB371;
+	font-size: 30px;
+	margin-left: 20%;
+}
+a:hover{
+	color: #3CB371;
+	background-color: lightgreen;
+}
+	div{
+width: 50%;
+margin-left: 45%;
+}
+	h2{color: #3CB371;
+
+}
+h3{
+	color: #008080;
+}
+.derecha{
+	margin-left: 30%;
+}
+h4{
+	color: darkred;
+	margin-left: 40%;
+}
+img{
+	margin-top: 10%;
+	margin-left: 32%;
+	border-radius: 20px;
+}
