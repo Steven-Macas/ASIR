@@ -1,0 +1,60 @@
+/*PROJECT: Project 4
+
+NAME:Roberth Steven Macas Ordóñez
+
+CLASS: 1º ASIR-A
+
+PROJECT TITLE: Content Syndication
+
+DATE: 13/05/2021*/
+
+body{background-color: rgb(243, 245, 240);
+text-align: justify;
+font-family: "Times New Roman", Times, serif;}
+
+div{background-color: #ffffff;
+margin: auto;
+margin-top: 30px;
+width: 90%;
+border-radius: 20px}
+
+header{background-color: rgb(236, 242, 251);
+font-family: Lucida Console;
+border-radius: 17px;
+padding-top: 10px;
+padding-bottom: 15px;}
+
+#primLink{color: rgb(254, 18, 64);
+padding-left: 10px;
+text-decoration:none}
+
+h1.cent{text-align: center;}
+
+h3.clr{color: rgb(165, 166, 168);
+}
+
+h4{text-align: right;
+margin-right: 50px;
+margin-left: 10px;
+padding-right: 10px;
+border: none;
+border-bottom: 2px solid #ffffff;
+border-right: 2px solid #ffffff;
+border-radius: 20px 0px 20px 0px;
+background-color: rgba(0,0,0,0.05)}
+
+a{color: rgb(166, 220, 229);}
+
+article{background-color: rgb(240, 235, 255);
+text-align: center;
+display: inline-block;
+width: 40%;
+border-radius: 15px;
+padding: 10px;
+margin: 30px;
+margin-top: 10px;
+margin-bottom:15px;}
+
+article a{text-decoration: none;}
+
+article p{padding: 10px;}
