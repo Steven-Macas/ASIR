@@ -1,2 +1,2 @@
 # ASIR/trabajoCovid
-Esta es una práctica sobre la investigacion como afectó en covid desde que comenzó hasta nuestros días (2021), esta práctica está hecho sin CSS
+Esta es una práctica sobre la investigacion como afectó en Burgos el covid desde que comenzó hasta nuestros días (2021).
