@@ -1,1 +1,2 @@
-En este trabajo se ha realizado una investigación sobre la situación del covid en Burgos desde que empezó la pandemia. Por motivos de espacio se ha separado en varios archivos los dos trabajos tanto el que no tiene CSS (trabajo_covid_sinCSS, trabajo_covid_sinCSS_2, Imagenes_covid, imagenes2_covid) como el que tiene (trabajo_covid_conCSS, trabajo_covid_conCSS_2, Imagenes_conCSS, Imagenes_conCSS_2).
+# ASIR/trabajoCovid
+Esta es una práctica sobre la investigacion como afectó en Burgos el covid desde que comenzó hasta nuestros días (2021).
