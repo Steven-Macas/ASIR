@@ -9,7 +9,7 @@ body{
 form{
 	margin: auto;
 	background-color: #3CB371;
-	width: 60%;
+	width: 70%;
 	padding: 15px;
 	text-align: center;
 	border-radius: 100px 100px;
@@ -17,7 +17,7 @@ form{
 }
 fieldset{
 	margin: auto;
-	width: 20%;
+	width: 30%;
 }
 	h1{
 text-align: center;
@@ -36,7 +36,7 @@ a:hover{
 	background-color: lightgreen;
 }
 	div{
-width: 50%;
+width: 60%;
 margin-left: 45%;
 }
 	h2{color: #3CB371;
@@ -56,4 +56,8 @@ img{
 	margin-top: 10%;
 	margin-left: 32%;
 	border-radius: 20px;
+}
+
+table{
+	text-align: center;
 }

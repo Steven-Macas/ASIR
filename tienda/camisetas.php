@@ -1,32 +1,54 @@
-<?php
+<?php 
 	session_start();
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Zacfrix</title>
-	<link rel="stylesheet" type="text/css" href="tienda.css">
-	<link rel="shortcut icon" type="image/x-icon" href="imagenes/logo.png" />
+	<title>Tienda</title>
+	<link rel="stylesheet" type="text/css" href="tienda.css"/>
+	<style>
+		h2{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-	<h1>Camisetas</h1><hr/>
-	<form action="index2.php" method="post">
+	<h1>Sección de Camisetas?</h1>
+	<h2>¿Qué desea comprar?</h2>
+	<form action="productos2.php" method='post'>
 		<fieldset>
-			<legend>Tipo</legend>
-			<input type="checkbox" name="camisetas[]" value="top" id="top"/><label for="top">Top -> 5€</label><br/>
+			<legend>Camisetas</legend>
+			<table>	
+	<?php 
+	require_once ("datos_bd.php");
+	require_once ("maneja_bd.php");
+	require_once ("maneja_productos.php");
 
-			<input type="checkbox" name="camisetas[]" value="polo" id="polo"/><label for="polo">Polo -> 10€</label><br/>
-
-			<input type="checkbox" name="camisetas[]" value="nike" id="nike"/><label for="nike">Nike -> 15€</label><br/>
-
-			<input type="checkbox" name="camisetas[]" value="adidas" id="adidas"/><label for="adidas">Adidas -> 8€</label><br/>
-		</fieldset>
-		<input type="submit" name="volverCamisetas" value="Volver"/>
-		<input type="submit" name="volverCamisetas" value="Pagar"/>
-		<input type="hidden" name="ropa" value="vuelta"/>
+		conecta_bd ($basedatos, $serv, $baseD, $user, $key);
+		$tipo='Arriba';
+	$consulta="select * from articulos where tipoArt= :tipo";
+						   //Hacemos el blindaje
+	$sentencia=$basedatos->prepare($consulta);
+	$sentencia->bindValue("tipo", $tipo);
+	$sentencia->execute();
+	if ($fila = $sentencia->fetch()) {
+		echo "<tr><th>Tipo</th><th>Talla</th><th>Color</th><th>Precio</th></tr>";
+		echo "<tr><td><input type='checkbox' name='camisetas[]' value='". $fila['nombreArticulo'] . "'/>".$fila['nombreArticulo']."</td><td>".$fila['talla']."</td><td>".$fila['color']."</td><td>".$fila['precio']."</td></tr>";
+		while( $fila = $sentencia->fetch()){    
+			echo "<tr><td><input type='checkbox' name='camisetas[]' value='". $fila['nombreArticulo'] . "'/>".$fila['nombreArticulo']."</td><td>".$fila['talla']."</td><td>".$fila['color']."</td><td>".$fila['precio']."</td></tr>";
+		} 
+	}else{
+		echo "En este momento no hay camisetas disponibles";
+	}
+	$sentencia->closeCursor();
+	cierra_bd($basedatos);
+	?>
+</table>
+	</fieldset>
+	<input type="submit" name="ropa" value="volver">
+	<input type="submit" name="ropa" value="pagar">
 	</form>
 </body>
 </html>
