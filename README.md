@@ -1,1 +1,1 @@
-Aquí podrás ver algunos de las prácticas que se han realizado durante el curso de ASIR
+Aquí se mostrarán los ejercicios de PHP realizados en clase
